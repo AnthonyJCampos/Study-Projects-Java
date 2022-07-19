@@ -41,7 +41,7 @@ public class Album {
     }
 
     // inner class
-    public class SongList{
+    private class SongList{
 
         private ArrayList<Song> songs;
 
@@ -51,7 +51,7 @@ public class Album {
 
         } // end of default constructor
 
-        private boolean add(String title, double duration){
+        public boolean add(String title, double duration){
             if (findSong(title) == null) {
 
                 songs.add(new Song(title, duration));
@@ -62,7 +62,7 @@ public class Album {
 
         } // end of add
 
-        private Song find(String title){
+        public Song find(String title){
 
             for (Song checkedSong : this.songs) {
 
@@ -77,7 +77,7 @@ public class Album {
             return null;
         } // end of find
 
-        private Song find(int trackNumber){
+        public Song find(int trackNumber){
 
             int index = trackNumber -1;
 
