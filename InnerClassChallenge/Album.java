@@ -81,7 +81,7 @@ public class Album {
 
             int index = trackNumber -1;
 
-            if(index > 0 && index <= songs.size()){
+            if(index > 0 && index < songs.size()){
 
                 return songs.get(index);
 
